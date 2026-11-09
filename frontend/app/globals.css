@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --ink: #14213a;
+  --line: #dce1e8;
+  --blue: #2563eb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f7f4ee;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+.button {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 7px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+.primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.muted {
+  color: #64748b;
+}
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  white-space: nowrap;
+}
+.success {
+  background: #dcfce7;
+  color: #166534;
+}
+.danger,
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.notice {
+  padding: 10px 12px;
+  border-radius: 7px;
+}
+.eyebrow {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.auth {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.login {
+  width: 420px;
+  padding: 32px;
+}
+.login h1 {
+  font-size: 30px;
+  margin: 7px 0;
+}
+.login form,
+label {
+  display: grid;
+  gap: 6px;
+}
+.login form {
+  gap: 16px;
+  margin: 24px 0;
+}
+.login input,
+.create input,
+.field input {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  width: 100%;
+}
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+.shell aside {
+  background: #14213a;
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.shell aside h1 {
+  margin: 0;
+}
+.shell aside p {
+  color: #b9c5d6;
+}
+.shell nav {
+  display: grid;
+  gap: 18px;
+  margin-top: 45px;
+  color: #c8d3e2;
+}
+.signout {
+  margin-top: auto;
+  background: transparent;
+  border-color: #4a5970;
+  color: white;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.content {
+  padding: 38px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+.content header,
+.workspace header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.content h2,
+.workspace h1 {
+  margin: 4px 0;
+  font-size: 29px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 25px 0;
+}
+.stats .card {
+  padding: 18px;
+}
+.stats p {
+  color: #64748b;
+  margin: 13px 0 6px;
+}
+.stats strong {
+  font-size: 24px;
+}
+.table,
+.create {
+  padding: 22px;
+  margin-top: 20px;
+}
+.create {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.create h3,
+.create div {
+  grid-column: 1/-1;
+  margin: 0;
+}
+.create label {
+  display: grid;
+  gap: 6px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  color: #64748b;
+  font-weight: normal;
+}
+td,
+th {
+  padding: 14px 4px;
+  border-top: 1px solid var(--line);
+}
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.workspace {
+  max-width: 1260px;
+  margin: auto;
+  padding: 30px;
+}
+.workspace header {
+  margin: 18px 0;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+  margin: 20px 0;
+}
+.upload,
+.fields,
+.reconciliation {
+  padding: 20px;
+}
+.upload h2,
+.fields h2,
+.reconciliation h2 {
+  margin-top: 0;
+}
+.document,
+.validation {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.document p,
+.validation p {
+  color: #64748b;
+  margin: 5px 0;
+  font-size: 13px;
+}
+.document input {
+  display: none;
+}
+.field {
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+}
+.field .badge {
+  justify-self: start;
+}
+@media (max-width: 800px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+  .shell aside {
+    display: none;
+  }
+  .content,
+  .workspace {
+    padding: 20px;
+  }
+  .stats,
+  .review-grid,
+  .create {
+    grid-template-columns: 1fr;
+  }
+  .content header,
+  .workspace header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .login {
+    width: min(92vw, 420px);
+  }
+}
